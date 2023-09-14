@@ -13,15 +13,8 @@ class TestRecipe:
     def test_requires_title(self):
         '''requires each record to have a title.'''
 
-    
-         
 
     def test_requires_50_plus_char_instructions(self):
         with app.app_context():
 
-            Recipe.query.delete()
             db.session.commit()
-
-
-        
-
