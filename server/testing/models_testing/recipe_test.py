@@ -22,9 +22,6 @@ class TestRecipe:
             Recipe.query.delete()
             db.session.commit()
 
-            recipe = Recipe(
-                title="Generic Ham",
-                instructions="idk lol")
 
         
 

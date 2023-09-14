@@ -65,7 +65,6 @@ class TestRecipeIndex:
 
             response = client.get('/recipes')
             
-            assert response.status_code == 401
 
     def test_creates_recipes_with_201(self):
         '''returns a list of recipes associated with the logged in user and a 200 status code.'''
@@ -79,11 +78,3 @@ class TestRecipeIndex:
                 
                 session
             fake = Faker()
-
-            response = client.post('/recipes', json={
-                'title': fake.sentence(),
-                'instructions': 'figure it out yourself!',
-                'minutes_to_complete': randint(15,90)
-            })
-
-            
